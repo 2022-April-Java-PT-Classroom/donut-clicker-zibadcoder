@@ -11,6 +11,7 @@ describe("DonutMaker", () => {
         expect(underTest.numDonuts).toEqual(1);
 
 
+
     });
     test("should be able to add an autoclicker with 100 donuts", () =>{
         //Arrange 
@@ -31,10 +32,11 @@ describe("DonutMaker", () => {
         expect(underTest.numAutoclickers).toEqual(0);
 
 
+
     });
     test("should be able to increase the price of Autoclickers by 10 percent", () =>{
-        const underTest= new DonutMaker(110,1);
-        underTest.addAutoclickers();
+        const underTest= new DonutMaker(300,2);
+        underTest.addAutoclicker();
         expect(underTest.numDonuts).toEqual(0);
         expect(underTest.numAutoclickers).toEqual(2);
 
