@@ -4,10 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
     <title>Donut Clicker</title>
+    
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="nav">
+        <ul>
+          <li><a href="#">Fred Baker</a></li>
+          <li><a href="https://orteil.dashnet.org/cookieclicker/">Inspiration</a></li>
+          <li><a href="#"> Developer</a>
+            <ul>
+              <li><a href="#personal-bio">Bio</a></li>
+              <li><a href="https://zibadcoder.github.io">portfolio </a></li>
+              <li><a href="https://github.com/zibadcoder">github</a>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <section id="about-baker">
+        <h3>About Fred Baker</h3>
+        <p> Fred Baker is donut maker company that creates donuts using the concept of Donut Maker Clicker.Please enjoy the game below where you
+          you can make delicious donuts just by click alone. Good luck!
+        </p>
+      </section>
+      <section id="personal-bio">
+        <h3>Abount Me</h3>
+        <p>I am Full Stack Developer with passion for soccer and fitness. Please visit my personal
+           portfolio site and Github location mentioned above to learn more about me.</p>
+      </section>
+
+      <section>
+        <main >
+          <h3>Donut clicker GAme</h3>
+          <button class="btn donut-maker">Donut</button>
+          <button class="btn reset-btn">Reset</button>          
+          <p class="donut-count"> Donut count: </p>
+          <p class="donut-count-score">0</p>
+        </main>
+      </section>
+      <section class="auto-clickers">
+        <button class="btn auto-clicker">Auto Clicker</button>
+        <p class="auto-clicker-count">Auto-Clicker Count: </p>
+        <p class="auto-clicker-score">0</p>
+      </section>
+      <section class="donut-multipliers">
+        <button class="btn donut-multiplier">Donut Multiplier</button>
+        <p class="donut-multiplier-count">Donut Multiplier Count</p>
+        <p class="donut-multiplier-score">0</p>
+      </section>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
