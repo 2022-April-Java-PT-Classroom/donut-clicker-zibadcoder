@@ -58,6 +58,11 @@ class DonutMaker {
         return multiplierCost;
 
     }
+    resetGame(){
+        this.numDonuts = 0;
+        this.numAutoclickers = 0;
+        this.numDonutMultipliers = 0;
+    }
     addDonutMultiplier(){
         let priceOfDonutMultiplier = 10;
 

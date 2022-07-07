@@ -12,10 +12,8 @@ const multiplierBtn = document.querySelector('.donut-multiplier');
 const multiplierCountText = document.querySelector('.donut-multiplier-count');
 const multiplierCountValue = document.querySelector('.donut-multiplier-score');
 const resetBtn = document.querySelector('.reset-btn');
-const autclickersSect = document.querySelector('.auto-clickers');
-const donutMultipliersSect = document.querySelector('.donut-multipliers');
-
-
+const multiplierCost = document.querySelector('#multiplier_cost');
+const autoclickerCost = document.querySelector('#autoclicker_cost');
 
 
 const createdDonutMaker = new DonutMaker(0, 0 , 0); 
@@ -72,19 +70,13 @@ const backgroundChanger = function (){
       const returnedDonutMultiplierPrice = createdDonutMaker.findMultiplierCost();
       donutMultiplierPriceScore.textContent = returnedDonutMultiplierPrice;
       donutMultiplierPrice.appendChild(donutMultiplierPriceScore);
-      donutMultipliersSect.appendChild(donutMultiplierPrice);
+      multiplierCost.appendChild(donutMultiplierPrice);
 
       if(donutCountValue.textContent < 10){
-        donutMultiplierPrice.style.display = 'none';
-        donutMultiplierPriceScore.style.display = 'none';
-      }
-
-
-  
-
-
-
-      
+        donutMultiplierPrice.remove();
+        
+        
+      }      
 
       
 
@@ -110,10 +102,11 @@ const backgroundChanger = function (){
         const returnedAutoclickerPrice = createdDonutMaker.findAutoclickerCost();
         autoclickerPriceScore.textContent = returnedAutoclickerPrice;
         autoclickerValue.appendChild(autoclickerPriceScore);
-        autclickersSect.appendChild(autoclickerValue);
+        autoclickerCost.appendChild(autoclickerValue);
         if(donutCountValue.textContent < 100){
-          autoclickerValue.style.display = 'none';
-          autoclickerPriceScore.style.display = 'none';
+          autoclickerValue.remove();
+          // autoclickerValue.style.display = 'none';
+          // autoclickerPriceScore.style.display = 'none';
         }
 
               
@@ -125,13 +118,18 @@ const backgroundChanger = function (){
 
       });
       resetBtn.addEventListener('click', () => {
+         
          donutCountValue.textContent = 0;
          autoClickerCountValue.textContent = 0;
          multiplierCountValue.textContent = 0;
          autoClickerBtn.style.backgroundColor = '#669900';
          multiplierBtn.style.backgroundColor = '#669900';
-         autoclickerValue.style.display = none;
-         autoclickerPriceScore.display = none;
+        //  autoclickerCost.remove();
+        //  multiplierCost.remove();
+         createdDonutMaker.resetGame();
+         
+         
+         
 
 
 
