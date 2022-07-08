@@ -16,7 +16,7 @@
     <div class="container">
       <div class="nav">
         <ul>
-          <li ><a href="#" class="show-modal">Fred Baker</a></li>
+           
           <li><a href="https://orteil.dashnet.org/cookieclicker/">Inspiration</a></li>
           <li><a href="#"> Developer</a>
             <ul>
@@ -27,14 +27,18 @@
           </li>
         </ul>
       </div>
-      
-      <section id="about-baker">
-        <h3>About Fred Baker</h3>
-        <p> Fred Baker is donut maker company that creates donuts by clicking diffrent types of buttons.
+      <button class="show-modal">About Fred Baker</button>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Fred Baker</h1>
+        <p>
+          Fred Baker is donut maker company that creates donuts by clicking diffrent types of buttons.
           Please enjoy the game below where you
           you can make many delicious donuts just by click alone. 
         </p>
-      </section>
+      </div>
+      
+      
       <section id="personal-bio">
         <h3>Abount Me</h3>
         <p>I am Full Stack Developer with passion for soccer and fitness. Please visit my personal
@@ -64,6 +68,8 @@
         <section id="multiplier_cost"></section>
       </section>
     </div>
+    <div class="overlay hidden"></div>
+
     <script src="./index.js"></script>
   </body>
 </html>

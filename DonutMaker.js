@@ -19,9 +19,9 @@ class DonutMaker {
         if(this.numDonutMultipliers === 0){
         this.numDonuts+= this.numAutoclickers > 0 ? 1*this.numAutoclickers: 1;
         }else if(this.numDonutMultipliers > 0 && this.numAutoclickers === 0){
-            this.numDonuts += Math.round(Math.pow(1.2, this.numDonutMultipliers));
+            this.numDonuts += (Math.pow(1.2, this.numDonutMultipliers));
         }else if(this.numDonutMultipliers > 0 && this.numAutoclickers > 0){
-            this.numDonuts = this.numDonuts + Math.round((this.numAutoclickers*(Math.pow(1.2, this.numDonutMultipliers))));
+            this.numDonuts +=  (this.numAutoclickers*(Math.pow(1.2, this.numDonutMultipliers)));
         }
 
     }
@@ -30,7 +30,7 @@ class DonutMaker {
 
         let autoClickercost = 100;
         for(let i = 0; i < this.numAutoclickers; i++){
-            autoClickercost+= Math.round(autoClickercost* 0.100);
+            autoClickercost +=autoClickercost* 0.100;
             
         }
         if(this.numDonuts >= 100 ){
@@ -46,14 +46,14 @@ class DonutMaker {
     findAutoclickerCost(){
         let autoclickerPrice = 100;
         for(let i = 0; i < this.numAutoclickers; i++){
-            autoclickerPrice += Math.round(autoclickerPrice*0.1);
+            autoclickerPrice += autoclickerPrice*0.1;
         }
         return autoclickerPrice;
     }
     findMultiplierCost(){
         let multiplierCost = 10;
         for(let i = 0; i < this.numDonutMultipliers; i++){
-            multiplierCost += Math.round(multiplierCost*0.1);
+            multiplierCost += multiplierCost*0.1;
         }
         return multiplierCost;
 
@@ -67,7 +67,7 @@ class DonutMaker {
         let priceOfDonutMultiplier = 10;
 
         for(let i = 0; i < this.numDonutMultipliers; i++){
-            priceOfDonutMultiplier += Math.round(priceOfDonutMultiplier*0.1);
+            priceOfDonutMultiplier += priceOfDonutMultiplier*0.1;
         }
 
 

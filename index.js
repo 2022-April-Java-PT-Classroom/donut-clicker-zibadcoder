@@ -15,12 +15,30 @@ const resetBtn = document.querySelector('.reset-btn');
 const multiplierCost = document.querySelector('#multiplier_cost');
 const autoclickerCost = document.querySelector('#autoclicker_cost');
 
+const modal = document.querySelector('.modal');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnsOpenModal = document.querySelector('.show-modal');
+const overlay = document.querySelector('.overlay');
+
 
 const createdDonutMaker = new DonutMaker(0, 0 , 0); 
 donutCountValue.textContent = 0;
 autoClickerCountValue.textContent = 0;
 multiplierCountValue.textContent = 0;
 
+btnsOpenModal.addEventListener('click', () => {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+})
+btnCloseModal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+})
+overlay.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+
+})
 
 
 

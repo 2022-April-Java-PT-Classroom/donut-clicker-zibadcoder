@@ -84,7 +84,7 @@ describe("DonutMaker", () => {
         
             
         expect(underTest.numDonutMultipliers).toEqual(2);
-        expect(underTest.numDonuts).toEqual(1);
+        expect(underTest.numDonuts).toEqual(1.44);
         
 
         
@@ -99,7 +99,7 @@ describe("DonutMaker", () => {
         
             
         expect(underTest.numDonutMultipliers).toEqual(3);
-        expect(underTest.numDonuts).toEqual(1);
+        expect(underTest.numDonuts).toBeLessThan(1);
         
 
         
@@ -112,33 +112,33 @@ describe("DonutMaker", () => {
         underTest.addDonut();     
                    
         //after rounding
-        expect(underTest.numDonuts).toEqual(11);
+        expect(underTest.numDonuts).toEqual(11.2);
         
 
         
 
 
     });
-    test("should be able to increase the value of click by 1.44 with the second donut multiplier before rounding", () =>{
+    test("should be able to increase the value of click by 1.44 with the second donut multiplier ", () =>{
         const underTest= new DonutMaker(10, 0, 2);               
         
         underTest.addDonut();     
                    
         //after rounding
-        expect(underTest.numDonuts).toEqual(11);
+        expect(underTest.numDonuts).toEqual(11.44);
         
 
         
 
 
     });
-    test("should be able to increase the value of each auto clicker by the number of donut multiplier before rounding", () =>{
+    test("should be able to increase the value of each auto clicker by the number of donut multiplier ", () =>{
         const underTest= new DonutMaker(10, 1, 2);               
         
         underTest.addDonut();     
                    
         //after rounding
-        expect(underTest.numDonuts).toEqual(11);
+        expect(underTest.numDonuts).toEqual(11.44);
         
 
         
