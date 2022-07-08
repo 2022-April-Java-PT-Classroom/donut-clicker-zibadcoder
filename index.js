@@ -21,11 +21,7 @@ donutCountValue.textContent = 0;
 autoClickerCountValue.textContent = 0;
 multiplierCountValue.textContent = 0;
 
- 
 
-
-
-  
 
 
 const backgroundChanger = function (){
@@ -47,8 +43,7 @@ const backgroundChanger = function (){
 }
 
   
-  donutBtn.addEventListener('click', () => {
-      
+  donutBtn.addEventListener('click', () => {      
 
       
       createdDonutMaker.addDonut();
@@ -79,13 +74,9 @@ const backgroundChanger = function (){
       }      
 
       
-
-
     });
-
     
-    
-      
+         
       autoClickerBtn.addEventListener('click', () => {
        
 
@@ -105,15 +96,11 @@ const backgroundChanger = function (){
         autoclickerCost.appendChild(autoclickerValue);
         if(donutCountValue.textContent < 100){
           autoclickerValue.remove();
-          // autoclickerValue.style.display = 'none';
-          // autoclickerPriceScore.style.display = 'none';
-        }
-
-              
-              
-        
-              
-                
+          
+          
+        }             
+                               
+               
         
 
       });
@@ -124,16 +111,14 @@ const backgroundChanger = function (){
          multiplierCountValue.textContent = 0;
          autoClickerBtn.style.backgroundColor = '#669900';
          multiplierBtn.style.backgroundColor = '#669900';
-        //  autoclickerCost.remove();
-        //  multiplierCost.remove();
-         createdDonutMaker.resetGame();
-         
-         
-         
+        
+         createdDonutMaker.resetGame();         
+                 
 
 
 
-      })
+      });
+
 
       
       

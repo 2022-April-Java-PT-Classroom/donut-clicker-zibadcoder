@@ -96,7 +96,6 @@ section {
     background-color: #669900;
 }
 .reset-btn {
-    position: absolute;
-    top: px;
+    position: absolute;    
     right: 250px;
 }
