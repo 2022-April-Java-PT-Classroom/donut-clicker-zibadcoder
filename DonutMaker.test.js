@@ -137,8 +137,8 @@ describe("DonutMaker", () => {
         
         underTest.addDonut();     
                    
-        //after rounding
-        expect(underTest.numDonuts).toEqual(11.44);
+        
+        expect(underTest.numDonuts).toEqual(11);
         
 
         

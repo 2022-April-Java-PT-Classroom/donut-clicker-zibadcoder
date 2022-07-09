@@ -100,6 +100,11 @@ section {
     position: absolute;    
     right: 250px;
 }
+.activate-auto-clicker {
+    position: absolute;
+    top: 600px;
+    right: 250px;
+}
 .show-modal {
     font-size: 1.3rem;
     font-weight: 600;
@@ -111,6 +116,14 @@ section {
     border-radius: 10rem;
     cursor: pointer;
   }
+  #modal-title {
+      margin-bottom: 20px;
+     
+  }
+  #modal-info {
+      line-height: 1.8rem;
+  }
+  
   .close-modal {
    
     top: 250px;
